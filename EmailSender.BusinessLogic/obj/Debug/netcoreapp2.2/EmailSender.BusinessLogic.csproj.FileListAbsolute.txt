@@ -1,0 +1,14 @@
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic\obj\Debug\netcoreapp2.2\EmailSender.BusinessLogic.csprojResolveAssemblyReference.cache
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic\obj\Debug\netcoreapp2.2\EmailSender.BusinessLogic.EmailTemplates.resources
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic\obj\Debug\netcoreapp2.2\EmailSender.BusinessLogic.csproj.GenerateResource.cache
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic\obj\Debug\netcoreapp2.2\EmailSender.BusinessLogic.csproj.CoreCompileInputs.cache
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic\obj\Debug\netcoreapp2.2\EmailSender.BusinessLogic.AssemblyInfoInputs.cache
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic\obj\Debug\netcoreapp2.2\EmailSender.BusinessLogic.AssemblyInfo.cs
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic\bin\Debug\netcoreapp2.2\EmailSender.BusinessLogic.deps.json
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic\bin\Debug\netcoreapp2.2\EmailSender.BusinessLogic.dll
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic\bin\Debug\netcoreapp2.2\EmailSender.BusinessLogic.pdb
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic\bin\Debug\netcoreapp2.2\EmailSender.DataLayer.dll
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic\bin\Debug\netcoreapp2.2\EmailSender.DataLayer.pdb
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic\obj\Debug\netcoreapp2.2\EmailSender.BusinessLogic.csproj.CopyComplete
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic\obj\Debug\netcoreapp2.2\EmailSender.BusinessLogic.dll
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic\obj\Debug\netcoreapp2.2\EmailSender.BusinessLogic.pdb

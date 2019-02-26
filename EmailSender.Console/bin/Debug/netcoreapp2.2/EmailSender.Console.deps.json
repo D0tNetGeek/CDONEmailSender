@@ -1,0 +1,183 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v2.2",
+    "signature": "829085a088173b95b205a8f8d2ba3360bdb9535c"
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v2.2": {
+      "EmailSender.Console/1.0.0": {
+        "dependencies": {
+          "EmailSender.BusinessLogic": "1.0.0"
+        },
+        "runtime": {
+          "EmailSender.Console.dll": {}
+        }
+      },
+      "AngleSharp/0.9.6": {
+        "runtime": {
+          "lib/net45/AngleSharp.dll": {
+            "assemblyVersion": "0.9.6.41832",
+            "fileVersion": "0.9.6.0"
+          }
+        }
+      },
+      "Common.Logging/3.3.1": {
+        "dependencies": {
+          "Common.Logging.Core": "3.3.1"
+        },
+        "runtime": {
+          "lib/net40/Common.Logging.dll": {
+            "assemblyVersion": "3.3.1.0",
+            "fileVersion": "3.3.1.0"
+          }
+        }
+      },
+      "Common.Logging.Core/3.3.1": {
+        "runtime": {
+          "lib/net40/Common.Logging.Core.dll": {
+            "assemblyVersion": "3.3.1.0",
+            "fileVersion": "3.3.1.0"
+          }
+        }
+      },
+      "CsQuery/1.3.4": {
+        "runtime": {
+          "lib/net40/CsQuery.dll": {
+            "assemblyVersion": "1.3.3.249",
+            "fileVersion": "1.3.3.249"
+          }
+        }
+      },
+      "Dragon.Mail/1.10.5": {
+        "dependencies": {
+          "Common.Logging": "3.3.1",
+          "CsQuery": "1.3.4",
+          "Handlebars.Net": "1.7.1",
+          "HtmlSanitizer": "3.2.105",
+          "Microsoft.AspNet.WebApi.Client": "5.2.3"
+        },
+        "runtime": {
+          "lib/Dragon.Mail.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "Handlebars.Net/1.7.1": {
+        "runtime": {
+          "lib/Handlebars.dll": {
+            "assemblyVersion": "1.0.0.0",
+            "fileVersion": "1.0.0.0"
+          }
+        }
+      },
+      "HtmlSanitizer/3.2.105": {
+        "dependencies": {
+          "AngleSharp": "0.9.6"
+        },
+        "runtime": {
+          "lib/net45/HtmlSanitizer.dll": {
+            "assemblyVersion": "3.0.0.0",
+            "fileVersion": "3.2.105.0"
+          }
+        }
+      },
+      "Microsoft.AspNet.WebApi.Client/5.2.3": {
+        "runtime": {
+          "lib/net45/System.Net.Http.Formatting.dll": {
+            "assemblyVersion": "5.2.3.0",
+            "fileVersion": "5.2.30128.0"
+          }
+        }
+      },
+      "EmailSender.BusinessLogic/1.0.0": {
+        "dependencies": {
+          "Dragon.Mail": "1.10.5",
+          "EmailSender.DataLayer": "1.0.0"
+        },
+        "runtime": {
+          "EmailSender.BusinessLogic.dll": {}
+        }
+      },
+      "EmailSender.DataLayer/1.0.0": {
+        "runtime": {
+          "EmailSender.DataLayer.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "EmailSender.Console/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "AngleSharp/0.9.6": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-700fdQDmXGwj0akcQ7FL4hIdGLTzomYj72RVYAcEaBsITor3m8jG6eGbmrUArx5aNkxd5KGfo+70xnKodgtdwg==",
+      "path": "anglesharp/0.9.6",
+      "hashPath": "anglesharp.0.9.6.nupkg.sha512"
+    },
+    "Common.Logging/3.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-m1YPan17x4IFiAgk1D3/vEX0+w55hrQ4/x7lYbSdZ2BC7El6zVjd4DIKhlfFkWJEU1aAnE/MhM46kxQIR/4bYQ==",
+      "path": "common.logging/3.3.1",
+      "hashPath": "common.logging.3.3.1.nupkg.sha512"
+    },
+    "Common.Logging.Core/3.3.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-lEl2KeFvKHmyXX/61hQGz7P/GWBDPuHGUBl5bi2/vyYv7F3CDI+1kB/aOBHQmhqQMtQ1iqAzIaNl7/0Cct4iYw==",
+      "path": "common.logging.core/3.3.1",
+      "hashPath": "common.logging.core.3.3.1.nupkg.sha512"
+    },
+    "CsQuery/1.3.4": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-cjyVYUPAFYccco2a9evQnkJFzuM7VpqnHgtXfwSERGuFomCX0zeHurnS1v3fta4T7xEjpMqB2r3/n+5z+ORlEQ==",
+      "path": "csquery/1.3.4",
+      "hashPath": "csquery.1.3.4.nupkg.sha512"
+    },
+    "Dragon.Mail/1.10.5": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-SOlFuS2WOZ1sxntIh20sr9Q6IyYdXH9BEaNJ+sf/7n5zEH0kETixM2NGeddl/WrauCehvvEdM8yaDXT1DC8PLw==",
+      "path": "dragon.mail/1.10.5",
+      "hashPath": "dragon.mail.1.10.5.nupkg.sha512"
+    },
+    "Handlebars.Net/1.7.1": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-tMbUzldgjS5xbr74E/UlvTXutfZudDt7nQa0MGfvrBEgNqgR+oMOdgOXO9X5IzQOwjPVCqaBHjZnzucOtx8r/Q==",
+      "path": "handlebars.net/1.7.1",
+      "hashPath": "handlebars.net.1.7.1.nupkg.sha512"
+    },
+    "HtmlSanitizer/3.2.105": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-9WEryM3NvbEJZoZq+HoDHw/v1gi0H+3ntx1Gmip32hftAZPFeR4Vi26Xi3FiDrFcfVIJtWeUwfkPmS73Zk95Wg==",
+      "path": "htmlsanitizer/3.2.105",
+      "hashPath": "htmlsanitizer.3.2.105.nupkg.sha512"
+    },
+    "Microsoft.AspNet.WebApi.Client/5.2.3": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-ULpkotsRpexb6KPbqmQ+PBOE+Yjr0P1v2aAeBYdp2aVmf0+4T71Gz/jPmDQc9qlvPVRNKgVyaXw10Ii43EUdLQ==",
+      "path": "microsoft.aspnet.webapi.client/5.2.3",
+      "hashPath": "microsoft.aspnet.webapi.client.5.2.3.nupkg.sha512"
+    },
+    "EmailSender.BusinessLogic/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "EmailSender.DataLayer/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

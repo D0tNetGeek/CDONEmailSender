@@ -15,7 +15,7 @@ namespace EmailSender.DataLayer
         public DateTime OrderDatetime { get; set; }
     }
 
-    class DataLayer
+    public class DataLayer1
     {
         /// <summary>
         /// Mockup method for all customers
@@ -23,6 +23,7 @@ namespace EmailSender.DataLayer
 		/// without changing the model code. Same with ListOrders.
 		/// Here we can use a base abstract class or an interface.
 		/// Classes Customer, Order and DataLayer should be sealed.
+		/// </comments>
         /// </summary>
         public static List<Customer> ListCustomers => new List<Customer>()
                        {
