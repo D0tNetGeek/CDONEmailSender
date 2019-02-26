@@ -307,10 +307,11 @@
   },
   "libraries": {
     "AngleSharp/0.9.6": {
-      "sha512": "700fdQDmXGwj0akcQ7FL4hIdGLTzomYj72RVYAcEaBsITor3m8jG6eGbmrUArx5aNkxd5KGfo+70xnKodgtdwg==",
+      "sha512": "hySLCEvckL5mR9iPEMDOaPCQGPndjuCnShssL66ybmb0jv7Fvvd9mKjIq28TsO5qmOkYDr8rPvhWtfWjwH3Egg==",
       "type": "package",
       "path": "anglesharp/0.9.6",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "anglesharp.0.9.6.nupkg.sha512",
         "anglesharp.nuspec",
@@ -327,10 +328,11 @@
       ]
     },
     "Common.Logging/3.3.1": {
-      "sha512": "m1YPan17x4IFiAgk1D3/vEX0+w55hrQ4/x7lYbSdZ2BC7El6zVjd4DIKhlfFkWJEU1aAnE/MhM46kxQIR/4bYQ==",
+      "sha512": "Wv07G5iQ+yUHI3RWqXGFys3N7Gd7vx+OYFGw4kcqfCSoWMJJLNVZqB/zyqPC8kqxE7Ezcj1YrU7zGC3/gUXF3A==",
       "type": "package",
       "path": "common.logging/3.3.1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "common.logging.3.3.1.nupkg.sha512",
         "common.logging.nuspec",
@@ -343,10 +345,11 @@
       ]
     },
     "Common.Logging.Core/3.3.1": {
-      "sha512": "lEl2KeFvKHmyXX/61hQGz7P/GWBDPuHGUBl5bi2/vyYv7F3CDI+1kB/aOBHQmhqQMtQ1iqAzIaNl7/0Cct4iYw==",
+      "sha512": "geJ4X7mjL/KDXNMfJbq6TnZfZ0bbEFi1HpS3Ayv09ZKxBgKaL0KysAw4k8w7DSE/nk0nDwkQEmStRxBIpBlsAQ==",
       "type": "package",
       "path": "common.logging.core/3.3.1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "common.logging.core.3.3.1.nupkg.sha512",
         "common.logging.core.nuspec",
@@ -362,10 +365,11 @@
       ]
     },
     "CsQuery/1.3.4": {
-      "sha512": "cjyVYUPAFYccco2a9evQnkJFzuM7VpqnHgtXfwSERGuFomCX0zeHurnS1v3fta4T7xEjpMqB2r3/n+5z+ORlEQ==",
+      "sha512": "JQUAwMrxt4Wg5GVxT7kKNYQTi0+gvN+DdQ60C2ZVegzvftrOpJgVobazZn+/OcReiNLIGwJhMFSn0FskgqbOUQ==",
       "type": "package",
       "path": "csquery/1.3.4",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "csquery.1.3.4.nupkg.sha512",
         "csquery.nuspec",
@@ -374,10 +378,11 @@
       ]
     },
     "Dragon.Mail/1.10.5": {
-      "sha512": "SOlFuS2WOZ1sxntIh20sr9Q6IyYdXH9BEaNJ+sf/7n5zEH0kETixM2NGeddl/WrauCehvvEdM8yaDXT1DC8PLw==",
+      "sha512": "rvWL/ymyMWYmZFjFAQhYTj8IFiySjxlzsAWl/2V6uBI67lnD21meBk3I6mXyB321h6d54PVbKWZ8ix8k5zfNEg==",
       "type": "package",
       "path": "dragon.mail/1.10.5",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "dragon.mail.1.10.5.nupkg.sha512",
         "dragon.mail.nuspec",
@@ -385,10 +390,11 @@
       ]
     },
     "Handlebars.Net/1.7.1": {
-      "sha512": "tMbUzldgjS5xbr74E/UlvTXutfZudDt7nQa0MGfvrBEgNqgR+oMOdgOXO9X5IzQOwjPVCqaBHjZnzucOtx8r/Q==",
+      "sha512": "xVjqQjHx8BowbbykvPZ8gl/PUqP8LpWHA+nRbz8r3ZDrfioSywGV3XB6J0R+l48K6B/1kiQBr51ngNdbZyz4uQ==",
       "type": "package",
       "path": "handlebars.net/1.7.1",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "handlebars.net.1.7.1.nupkg.sha512",
         "handlebars.net.nuspec",
@@ -396,10 +402,11 @@
       ]
     },
     "HtmlSanitizer/3.2.105": {
-      "sha512": "9WEryM3NvbEJZoZq+HoDHw/v1gi0H+3ntx1Gmip32hftAZPFeR4Vi26Xi3FiDrFcfVIJtWeUwfkPmS73Zk95Wg==",
+      "sha512": "CQBHdh8JQq5yGmjlUFpQ/h0rK+IyyHQwbnfBS8RJ7ImcNTuhsfQje6jBRXtwux9Us5iDMUyvnmJYRaTOOI6YKw==",
       "type": "package",
       "path": "htmlsanitizer/3.2.105",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "htmlsanitizer.3.2.105.nupkg.sha512",
         "htmlsanitizer.nuspec",
@@ -408,10 +415,11 @@
       ]
     },
     "Microsoft.AspNet.WebApi.Client/5.2.3": {
-      "sha512": "ULpkotsRpexb6KPbqmQ+PBOE+Yjr0P1v2aAeBYdp2aVmf0+4T71Gz/jPmDQc9qlvPVRNKgVyaXw10Ii43EUdLQ==",
+      "sha512": "3kiI8peSXbXHDDrRuo+QaX0iCEVRe0nvn2dBDRw656uPX32UalbBlSIDUDlJxu05eau4tnuhsikiUuugvvoUoQ==",
       "type": "package",
       "path": "microsoft.aspnet.webapi.client/5.2.3",
       "files": [
+        ".nupkg.metadata",
         ".signature.p7s",
         "lib/net45/System.Net.Http.Formatting.dll",
         "lib/net45/System.Net.Http.Formatting.xml",
@@ -903,40 +911,35 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Vinnie\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
-    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
+    "/Users/Vinnie/.nuget/packages/": {},
+    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Work\\CDONEmailSender\\EmailSender.BusinessLogic\\EmailSender.BusinessLogic.csproj",
+      "projectUniqueName": "/Users/Vinnie/Projects/CDONEmailSender/EmailSender.BusinessLogic/EmailSender.BusinessLogic.csproj",
       "projectName": "EmailSender.BusinessLogic",
-      "projectPath": "C:\\Work\\CDONEmailSender\\EmailSender.BusinessLogic\\EmailSender.BusinessLogic.csproj",
-      "packagesPath": "C:\\Users\\Vinnie\\.nuget\\packages\\",
-      "outputPath": "C:\\Work\\CDONEmailSender\\EmailSender.BusinessLogic\\obj\\",
+      "projectPath": "/Users/Vinnie/Projects/CDONEmailSender/EmailSender.BusinessLogic/EmailSender.BusinessLogic.csproj",
+      "packagesPath": "/Users/Vinnie/.nuget/packages/",
+      "outputPath": "/Users/Vinnie/Projects/CDONEmailSender/EmailSender.BusinessLogic/obj/",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
-        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "C:\\Users\\Vinnie\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
+        "/Users/Vinnie/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
-        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "netcoreapp2.2": {
           "projectReferences": {
-            "C:\\Work\\CDONEmailSender\\EmailSender.DataLayer\\EmailSender.DataLayer.csproj": {
-              "projectPath": "C:\\Work\\CDONEmailSender\\EmailSender.DataLayer\\EmailSender.DataLayer.csproj"
+            "/Users/Vinnie/Projects/CDONEmailSender/EmailSender.DataLayer/EmailSender.DataLayer.csproj": {
+              "projectPath": "/Users/Vinnie/Projects/CDONEmailSender/EmailSender.DataLayer/EmailSender.DataLayer.csproj"
             }
           }
         }

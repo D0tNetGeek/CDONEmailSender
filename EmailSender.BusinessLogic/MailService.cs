@@ -1,6 +1,8 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using EmailSender.BusinessLogic.Configs;
+using EmailSender.BusinessLogic.Enums;
 using EmailSender.BusinessLogic.Interfaces;
 using EmailSender.DataLayer;
 
@@ -9,19 +11,21 @@ namespace EmailSender.BusinessLogic
     /// <summary>
     /// Business logic for mail sending.
     /// </summary>
-    public class MailSender
+    public class MailService
     {
+        private readonly IDictionary<MailType, MailTypeConfiguration> _mailTypeConfigurations;
         public List<string> Errors { get; } = new List<string>();
         public IEnumerable<Customer> Customers { get; set; }
         public IEnumerable<Order> Orders { get; set; }
         public IMailSender Sender { get; set; }
+        public IMailTemplateRenderer MailTemplateRenderer { get; set; }
 
         private const string OurEmailAddress = "infor@cdon.com";
 
         /// <summary>
         /// 
         /// </summary>
-        public MailSender()
+        public MailService()
         {
             //List all customers
             Customers = DataLayer1.ListCustomers;
@@ -31,6 +35,38 @@ namespace EmailSender.BusinessLogic
 
             //Instantiate Sender
             Sender = new SmtpMailSender();
+
+            //Default template renderer
+            MailTemplateRenderer = new HandlebarsTemplateRenderer();
+
+            _mailTypeConfigurations = new Dictionary<MailType, MailTypeConfiguration>(){
+{
+    MailType.Welcome=new MailTypeConfiguration{
+        GetCustomers=()=>GetNewCustomers(),
+        Subject=EmailTemplates.WelcomeMail_Subject,
+        BodyTemplate=MailTemplates.WelcomeMail
+    }
+},
+{
+    MailType.Welcome=new MailTypeConfiguration{
+        GetCustomers=()=>GetCustomersWithoutRecentOrders(),
+        Subject=EmailTemplates.ComeBackMail_Subject,
+        BodyTemplate=MailTemplates.ComeBackMail
+}
+}
+            };
+        }
+
+        public void Send(MailType mailType)
+        {
+            if (!_mailTypeConfigurations.TryGetValue(mailType, out var mailTypeConfiguration))
+            {
+                throw new InvalidOperationException("Unsupported mail type");
+            }
+
+            var customers = mailTypeConfiguration.GetCustomers();
+
+            Send(customers, mailTypeConfiguration.Subject, mailTypeConfiguration.BodyTemplate);
         }
 
         /// <summary>
@@ -58,7 +94,7 @@ namespace EmailSender.BusinessLogic
             Send(GetCustomersWithoutRecentOrders(), voucher, "We miss you as a customer", template);
 #else
             //Every sunday run Comeback mail.
-            if(DateTime.Now.DayOfWeek.Equals(DayOfWeek.Monday))
+            if (DateTime.Now.DayOfWeek.Equals(DayOfWeek.Monday))
                 Send(GetCustomersWithoutRecentOrders(), "CDONComebackToUs", "We miss you as a customer", template);
 #endif
         }
@@ -69,12 +105,12 @@ namespace EmailSender.BusinessLogic
         /// <returns></returns>
         private IEnumerable<Customer> GetNewCustomers()
         {
-            if(Customers==null)
+            if (Customers == null)
                 throw new InvalidOperationException("Cannot search for a new new customers if you do not specify a list of customers in Customers");
 
             //If the customer is newly registered, one day back in time.
             var yesterday = DateTime.Now.Date.AddDays(-1);
-            
+
             return Customers.Where(x => x.CreatedDateTime >= yesterday);
         }
 
@@ -89,7 +125,7 @@ namespace EmailSender.BusinessLogic
                 throw new InvalidOperationException("Cannot search for inactive customers if you do not specify a list of customers in Customers");
 
             //Raise exception if no orders found.
-            if(Orders ==null)
+            if (Orders == null)
                 throw new InvalidOperationException("Cannot search for inactive customers if you do not specify a list of orders in Orders");
 
             //Check the orders and see if any customer exist in the list.
@@ -115,22 +151,20 @@ namespace EmailSender.BusinessLogic
         /// <param name="template"></param>
         private void Send(IEnumerable<Customer> customers, string voucher, string subject, string template)
         {
-            if(Sender ==null)
+            if (Sender == null)
                 throw new InvalidOperationException("Cannot send e-mails without specifying the Sender property");
 
             Errors.Clear();
 
             foreach (var customer in customers)
             {
-                var compiledTemplate = HandlebarsDotNet.Handlebars.Compile(template);
-
-                string body = compiledTemplate(new
+                string body = MailTemplateRenderer.Render(template, new
                 {
                     CompanyName = "CDON",
                     Customer = customer,
                     Voucher = voucher
                 });
-                
+
                 //Send the email.
                 Sender.Send(Errors, OurEmailAddress, subject, customer.Email, body);
             }
