@@ -6,12 +6,12 @@ namespace EmailSender.BusinessLogic.Interfaces
     /// </summary>
     public interface IMailSender
     {
-        void Send(IList<string> errors, string from, string subject, string to, string title, string body);
+        void Send(IList<string> errors, string from, string subject, string to, string body);
     }
 
     sealed class NullMailSender : IMailSender
     {
-        public void Send(IList<string> errors,  string from, string subject, string to, string title, string body)
+        public void Send(IList<string> errors,  string from, string subject, string to, string body)
         {
             
         }

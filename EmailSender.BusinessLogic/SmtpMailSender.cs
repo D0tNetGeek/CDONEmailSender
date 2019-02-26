@@ -14,7 +14,7 @@ namespace EmailSender.BusinessLogic
         private const int NumberOfRetriesOnError = 2;
         private const int DelayOnError = 10;
 
-        public void Send(IList<string> errors, string from, string subject, string to, string title, string body)
+        public void Send(IList<string> errors, string from, string subject, string to, string body)
         {
             //Try re-sending mails for number of retries times, in case of error.
             for (int i = 0; i <= NumberOfRetriesOnError; ++i)

@@ -118,7 +118,7 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="ComeBackEmail" xml:space="preserve">
-    <value>Welcome {{Customer.Email}}&lt;br&gt;We miss you as a customer. Our shop is filled with nice products. Here is a voucher that gives you 50 kr to shop for.&lt;br&gt;Voucher:{{Voucher}}&lt;br&gt;&lt;br&gt;Best Regards,&lt;br&gt;{{CompanyName}} Team</value>
+    <value>Welcome {{Customer.Email}}&lt;br&gt;We miss you as a customer. Our shop is filled with nice products. Here is a voucher that gives you 50 kr to shop for.&lt;br&gt;Voucher: {{Voucher}}&lt;br&gt;&lt;br&gt;Best Regards,&lt;br&gt;{{CompanyName}} Team</value>
   </data>
   <data name="WelcomeEmail" xml:space="preserve">
     <value>Welcome as a new customer at {{CompanyName}}!! &lt;br&gt;Hi {{Customer.Email}}, We would like to welcome you as a customer on our site!&lt;br&gt;&lt;br&gt;Best Regards&lt;br&gt;{{CompanyName}} Team</value>

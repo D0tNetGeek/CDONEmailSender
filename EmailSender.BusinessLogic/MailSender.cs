@@ -7,7 +7,7 @@ using EmailSender.DataLayer;
 namespace EmailSender.BusinessLogic
 {
     /// <summary>
-    /// 
+    /// Business logic for mail sending.
     /// </summary>
     public class MailSender
     {
@@ -42,19 +42,25 @@ namespace EmailSender.BusinessLogic
             var template = EmailTemplates.WelcomeEmail;
 
             //Send the mail.
-            Send(GetNewCustomers(), "Welcome", "Welcome as a new customer at CDON!", template);
+            Send(GetNewCustomers(), "", "Welcome as a new customer at CDON!", template);
         }
 
         /// <summary>
         /// Send ComeBack mail.
         /// </summary>
-        public void SendComeBackEmail()
+        public void SendComeBackEmail(string voucher)
         {
             //Get the Come Back Email Template.
             var template = EmailTemplates.ComeBackEmail;
 
             //Send the mail.
-            Send(GetCustomersWithoutRecentOrders(), "CDONComebackToUs", "We miss you as a customer", template);
+#if DEBUG
+            Send(GetCustomersWithoutRecentOrders(), voucher, "We miss you as a customer", template);
+#else
+            //Every sunday run Comeback mail.
+            if(DateTime.Now.DayOfWeek.Equals(DayOfWeek.Monday))
+                Send(GetCustomersWithoutRecentOrders(), "CDONComebackToUs", "We miss you as a customer", template);
+#endif
         }
 
         /// <summary>
@@ -105,9 +111,9 @@ namespace EmailSender.BusinessLogic
         /// </summary>
         /// <param name="customers"></param>
         /// <param name="subject"></param>
-        /// <param name="title"></param>
+        /// <param name="voucher"></param>
         /// <param name="template"></param>
-        private void Send(IEnumerable<Customer> customers, string title, string subject, string template)
+        private void Send(IEnumerable<Customer> customers, string voucher, string subject, string template)
         {
             if(Sender ==null)
                 throw new InvalidOperationException("Cannot send e-mails without specifying the Sender property");
@@ -121,11 +127,12 @@ namespace EmailSender.BusinessLogic
                 string body = compiledTemplate(new
                 {
                     CompanyName = "CDON",
-                    Customer = customer
+                    Customer = customer,
+                    Voucher = voucher
                 });
                 
                 //Send the email.
-                Sender.Send(Errors, OurEmailAddress, subject, customer.Email, title, body);
+                Sender.Send(Errors, OurEmailAddress, subject, customer.Email, body);
             }
         }
     }

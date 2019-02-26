@@ -61,7 +61,7 @@ namespace EmailSender.BusinessLogic {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Welcome {{Customer.Email}}&lt;br&gt;We miss you as a customer. Our shop is filled with nice products. Here is a voucher that gives you 50 kr to shop for.&lt;br&gt;Voucher:{{Voucher}}&lt;br&gt;&lt;br&gt;Best Regards,&lt;br&gt;{{CompanyName}} Team.
+        ///   Looks up a localized string similar to Welcome {{Customer.Email}}&lt;br&gt;We miss you as a customer. Our shop is filled with nice products. Here is a voucher that gives you 50 kr to shop for.&lt;br&gt;Voucher: {{Voucher}}&lt;br&gt;&lt;br&gt;Best Regards,&lt;br&gt;{{CompanyName}} Team.
         /// </summary>
         internal static string ComeBackEmail {
             get {
