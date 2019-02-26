@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 
 namespace EmailSender.DataLayer
 {
@@ -16,26 +17,23 @@ namespace EmailSender.DataLayer
 
 	class DataLayer
 	{
-		/// <summary>
-		/// Mockup method for all customers
-		/// </summary>
-		public static List<Customer> ListCustomers()
-		{
-			return new List<Customer>()
-				       {
-					       new Customer(){Email = "mail1@mail.com", CreatedDateTime = DateTime.Now.AddHours(-7)}, 
-					       new Customer(){Email = "mail2@mail.com", CreatedDateTime = DateTime.Now.AddDays(-1)}, 
-					       new Customer(){Email = "mail3@mail.com", CreatedDateTime = DateTime.Now.AddMonths(-6)}, 
-					       new Customer(){Email = "mail4@mail.com", CreatedDateTime = DateTime.Now.AddMonths(-1)}, 
-					       new Customer(){Email = "mail5@mail.com", CreatedDateTime = DateTime.Now.AddMonths(-2)},
-					       new Customer(){Email = "mail6@mail.com", CreatedDateTime = DateTime.Now.AddDays(-5)}
-				       };
-		}
+        /// <summary>
+        /// Mockup method for all customers
+        /// </summary>
+        public static List<Customer> ListCustomers => new List<Customer>()
+                       {
+                           new Customer(){Email = "mail1@mail.com", CreatedDateTime = DateTime.Now.AddHours(-7)},
+                           new Customer(){Email = "mail2@mail.com", CreatedDateTime = DateTime.Now.AddDays(-1)},
+                           new Customer(){Email = "mail3@mail.com", CreatedDateTime = DateTime.Now.AddMonths(-6)},
+                           new Customer(){Email = "mail4@mail.com", CreatedDateTime = DateTime.Now.AddMonths(-1)},
+                           new Customer(){Email = "mail5@mail.com", CreatedDateTime = DateTime.Now.AddMonths(-2)},
+                           new Customer(){Email = "mail6@mail.com", CreatedDateTime = DateTime.Now.AddDays(-5)}
+                       };
 
-		/// <summary>
-		/// Mockup method for listing all orders
-		/// </summary>
-		public static List<Order> ListOrders()
+        /// <summary>
+        /// Mockup method for listing all orders
+        /// </summary>
+        public static List<Order> ListOrders()
 		{
 			return new List<Order>()
 				       {
