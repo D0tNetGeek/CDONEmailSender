@@ -1,0 +1,14 @@
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic.Tests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic.Tests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic.Tests\bin\Debug\netcoreapp2.2\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic.Tests\bin\Debug\netcoreapp2.2\EmailSender.BusinessLogic.Tests.deps.json
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic.Tests\bin\Debug\netcoreapp2.2\EmailSender.BusinessLogic.Tests.runtimeconfig.json
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic.Tests\bin\Debug\netcoreapp2.2\EmailSender.BusinessLogic.Tests.runtimeconfig.dev.json
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic.Tests\bin\Debug\netcoreapp2.2\EmailSender.BusinessLogic.Tests.dll
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic.Tests\bin\Debug\netcoreapp2.2\EmailSender.BusinessLogic.Tests.pdb
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic.Tests\obj\Debug\netcoreapp2.2\EmailSender.BusinessLogic.Tests.csprojResolveAssemblyReference.cache
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic.Tests\obj\Debug\netcoreapp2.2\EmailSender.BusinessLogic.Tests.csproj.CoreCompileInputs.cache
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic.Tests\obj\Debug\netcoreapp2.2\EmailSender.BusinessLogic.Tests.AssemblyInfoInputs.cache
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic.Tests\obj\Debug\netcoreapp2.2\EmailSender.BusinessLogic.Tests.AssemblyInfo.cs
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic.Tests\obj\Debug\netcoreapp2.2\EmailSender.BusinessLogic.Tests.dll
+C:\Work\CDONEmailSender\EmailSender.BusinessLogic.Tests\obj\Debug\netcoreapp2.2\EmailSender.BusinessLogic.Tests.pdb

@@ -10,7 +10,6 @@
 C:\Work\CDONEmailSender\EmailSender.DataLayer\bin\Debug\netcoreapp2.2\EmailSender.DataLayer.deps.json
 C:\Work\CDONEmailSender\EmailSender.DataLayer\bin\Debug\netcoreapp2.2\EmailSender.DataLayer.dll
 C:\Work\CDONEmailSender\EmailSender.DataLayer\bin\Debug\netcoreapp2.2\EmailSender.DataLayer.pdb
-C:\Work\CDONEmailSender\EmailSender.DataLayer\obj\Debug\netcoreapp2.2\EmailSender.DataLayer.csprojResolveAssemblyReference.cache
 C:\Work\CDONEmailSender\EmailSender.DataLayer\obj\Debug\netcoreapp2.2\EmailSender.DataLayer.csproj.CoreCompileInputs.cache
 C:\Work\CDONEmailSender\EmailSender.DataLayer\obj\Debug\netcoreapp2.2\EmailSender.DataLayer.AssemblyInfoInputs.cache
 C:\Work\CDONEmailSender\EmailSender.DataLayer\obj\Debug\netcoreapp2.2\EmailSender.DataLayer.AssemblyInfo.cs
