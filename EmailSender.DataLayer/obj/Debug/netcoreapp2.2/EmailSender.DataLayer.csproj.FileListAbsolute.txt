@@ -15,3 +15,4 @@ C:\Work\CDONEmailSender\EmailSender.DataLayer\obj\Debug\netcoreapp2.2\EmailSende
 C:\Work\CDONEmailSender\EmailSender.DataLayer\obj\Debug\netcoreapp2.2\EmailSender.DataLayer.AssemblyInfo.cs
 C:\Work\CDONEmailSender\EmailSender.DataLayer\obj\Debug\netcoreapp2.2\EmailSender.DataLayer.dll
 C:\Work\CDONEmailSender\EmailSender.DataLayer\obj\Debug\netcoreapp2.2\EmailSender.DataLayer.pdb
+C:\Work\CDONEmailSender\EmailSender.DataLayer\obj\Debug\netcoreapp2.2\EmailSender.DataLayer.csprojResolveAssemblyReference.cache

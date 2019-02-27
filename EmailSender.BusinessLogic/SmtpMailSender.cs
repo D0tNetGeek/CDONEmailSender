@@ -9,7 +9,7 @@ namespace EmailSender.BusinessLogic
     /// <summary>
     /// Class implements IMailSender interface to send the mails.
     /// </summary>
-    sealed class SmtpMailSender : IMailSender
+    sealed class SmtpMailSender : IMailService
     {
         private const int NumberOfRetriesOnError = 2;
         private const int DelayOnError = 10;

@@ -13,7 +13,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="EmailTemplates.Designer.cs">
+    <Compile Update="Resources\EmailTemplates.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
       <DependentUpon>EmailTemplates.resx</DependentUpon>
@@ -21,7 +21,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <EmbeddedResource Update="EmailTemplates.resx">
+    <EmbeddedResource Update="Resources\EmailTemplates.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>EmailTemplates.Designer.cs</LastGenOutput>
     </EmbeddedResource>

@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace EmailSender.BusinessLogic {
+namespace EmailSender.BusinessLogic.Resources {
     using System;
     
     
@@ -39,7 +39,7 @@ namespace EmailSender.BusinessLogic {
         internal static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
-                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EmailSender.BusinessLogic.EmailTemplates", typeof(EmailTemplates).Assembly);
+                    global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EmailSender.BusinessLogic.Resources.EmailTemplates", typeof(EmailTemplates).Assembly);
                     resourceMan = temp;
                 }
                 return resourceMan;
@@ -70,11 +70,29 @@ namespace EmailSender.BusinessLogic {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to Welcome as a new customer at {{CompanyName}}!! &lt;br&gt;Hi {{Customer.Email}}, We would like to welcome you as a customer on our site!&lt;br&gt;&lt;br&gt;Best Regards&lt;br&gt;{{CompanyName}} Team.
+        ///   Looks up a localized string similar to We miss you as a customer.
+        /// </summary>
+        internal static string ComeBackEMail_Subject {
+            get {
+                return ResourceManager.GetString("ComeBackEMail_Subject", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Hi {{Customer.Email}}, We would like to welcome you as a customer on our site!&lt;br&gt;&lt;br&gt;Best Regards&lt;br&gt;{{CompanyName}} Team.
         /// </summary>
         internal static string WelcomeEmail {
             get {
                 return ResourceManager.GetString("WelcomeEmail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Welcome as a new customer at CDON!.
+        /// </summary>
+        internal static string WelcomeEMail_Subject {
+            get {
+                return ResourceManager.GetString("WelcomeEMail_Subject", resourceCulture);
             }
         }
     }

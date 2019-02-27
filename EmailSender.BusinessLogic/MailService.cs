@@ -4,6 +4,8 @@ using System.Linq;
 using EmailSender.BusinessLogic.Configs;
 using EmailSender.BusinessLogic.Enums;
 using EmailSender.BusinessLogic.Interfaces;
+using EmailSender.BusinessLogic.Resources;
+using EmailSender.BusinessLogic.TemplateRenderer;
 using EmailSender.DataLayer;
 
 namespace EmailSender.BusinessLogic
@@ -17,13 +19,13 @@ namespace EmailSender.BusinessLogic
         public List<string> Errors { get; } = new List<string>();
         public IEnumerable<Customer> Customers { get; set; }
         public IEnumerable<Order> Orders { get; set; }
-        public IMailSender Sender { get; set; }
+        public IMailService Sender { get; set; }
         public IMailTemplateRenderer MailTemplateRenderer { get; set; }
 
         private const string OurEmailAddress = "infor@cdon.com";
 
         /// <summary>
-        /// 
+        /// Constructor - Instantiates required Objects and Mail Templates
         /// </summary>
         public MailService()
         {
@@ -39,65 +41,46 @@ namespace EmailSender.BusinessLogic
             //Default template renderer
             MailTemplateRenderer = new HandlebarsTemplateRenderer();
 
-            _mailTypeConfigurations = new Dictionary<MailType, MailTypeConfiguration>(){
-{
-    MailType.Welcome=new MailTypeConfiguration{
-        GetCustomers=()=>GetNewCustomers(),
-        Subject=EmailTemplates.WelcomeMail_Subject,
-        BodyTemplate=MailTemplates.WelcomeMail
-    }
-},
-{
-    MailType.Welcome=new MailTypeConfiguration{
-        GetCustomers=()=>GetCustomersWithoutRecentOrders(),
-        Subject=EmailTemplates.ComeBackMail_Subject,
-        BodyTemplate=MailTemplates.ComeBackMail
-}
-}
+            _mailTypeConfigurations = new Dictionary<MailType, MailTypeConfiguration>()
+            {
+                {
+                    //Sets up the welcome email config.
+                    MailType.Welcome, new MailTypeConfiguration
+                    {
+                        GetCustomers = GetNewCustomers,
+                        Subject = EmailTemplates.WelcomeEMail_Subject,
+                        BodyTemplate = EmailTemplates.WelcomeEmail
+                    }
+                },
+                {
+                    //Sets up the comeback email config.
+                    MailType.ComeBack, new MailTypeConfiguration
+                    {
+                        GetCustomers = GetCustomersWithoutRecentOrders,
+                        Subject = EmailTemplates.ComeBackEMail_Subject,
+                        BodyTemplate = EmailTemplates.ComeBackEmail
+                    }
+                }
             };
         }
 
-        public void Send(MailType mailType)
-        {
-            if (!_mailTypeConfigurations.TryGetValue(mailType, out var mailTypeConfiguration))
-            {
-                throw new InvalidOperationException("Unsupported mail type");
-            }
+//        /// <summary>
+//        /// Send ComeBack mail.
+//        /// </summary>
+//        public void SendComeBackEmail(string voucher)
+//        {
+//            //Get the Come Back Email Template.
+//            var template = EmailTemplates.ComeBackEmail;
 
-            var customers = mailTypeConfiguration.GetCustomers();
-
-            Send(customers, mailTypeConfiguration.Subject, mailTypeConfiguration.BodyTemplate);
-        }
-
-        /// <summary>
-        /// Send Welcome mail.
-        /// </summary>
-        public void SendWelcomeEmails()
-        {
-            //Get the Welcome Email Template.
-            var template = EmailTemplates.WelcomeEmail;
-
-            //Send the mail.
-            Send(GetNewCustomers(), "", "Welcome as a new customer at CDON!", template);
-        }
-
-        /// <summary>
-        /// Send ComeBack mail.
-        /// </summary>
-        public void SendComeBackEmail(string voucher)
-        {
-            //Get the Come Back Email Template.
-            var template = EmailTemplates.ComeBackEmail;
-
-            //Send the mail.
-#if DEBUG
-            Send(GetCustomersWithoutRecentOrders(), voucher, "We miss you as a customer", template);
-#else
-            //Every sunday run Comeback mail.
-            if (DateTime.Now.DayOfWeek.Equals(DayOfWeek.Monday))
-                Send(GetCustomersWithoutRecentOrders(), "CDONComebackToUs", "We miss you as a customer", template);
-#endif
-        }
+//            //Send the mail.
+//#if DEBUG
+//            Send(GetCustomersWithoutRecentOrders(), voucher, "", template);
+//#else
+//            //Every sunday run Comeback mail.
+//            if (DateTime.Now.DayOfWeek.Equals(DayOfWeek.Monday))
+//                Send(GetCustomersWithoutRecentOrders(), "CDONComebackToUs", "We miss you as a customer", template);
+//#endif
+//        }
 
         /// <summary>
         /// Get All the customers.
@@ -141,6 +124,23 @@ namespace EmailSender.BusinessLogic
                 return latestOrder != null && latestOrder.OrderDatetime < oneMonthAgo;
             });
         }
+
+        /// <summary>
+        /// Calls the Send function based on MailType Enum.
+        /// </summary>
+        /// <param name="mailType"></param>
+        public void Send(MailType mailType)
+        {
+            if (!_mailTypeConfigurations.TryGetValue(mailType, out var mailTypeConfiguration))
+            {
+                throw new InvalidOperationException("Unsupported mail type");
+            }
+
+            var customers = mailTypeConfiguration.GetCustomers();
+
+            Send(customers, mailType == MailType.ComeBack ? "CDONComebackToUs" : "", mailTypeConfiguration.Subject, mailTypeConfiguration.BodyTemplate);
+        }
+
 
         /// <summary>
         /// Prepare to send the email. Render the template.

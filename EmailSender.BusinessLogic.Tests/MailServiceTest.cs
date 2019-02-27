@@ -1,7 +1,11 @@
 using System;
 using System.Collections.Generic;
+using System.Linq;
 using EmailSender.BusinessLogic.Enums;
+using EmailSender.BusinessLogic.Interfaces;
+using EmailSender.DataLayer;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
+using Moq;
 
 namespace EmailSender.BusinessLogic.Tests
 {
@@ -9,14 +13,14 @@ namespace EmailSender.BusinessLogic.Tests
     public class MailServiceTest
     {
         MailService mailService;
-        Mock<IMailSender> senderMock;
+        Mock<IMailService> senderMock;
         List<string> errors;
 
-        [TestInitialise]
+        [TestInitialize]
         public void Setup()
         {
-            _mailService = new MailService();
-            senderMock = new Mock<IMailSender>();
+            mailService = new MailService();
+            senderMock = new Mock<IMailService>();
             errors = new List<string>();
         }
 
@@ -45,10 +49,10 @@ namespace EmailSender.BusinessLogic.Tests
         {
             mailService.Customers = new List<Customer>
             {
-                new Customer{CreatedDatetime = DateTime.Now.AddDays(-2)}
+                new Customer {CreatedDateTime = DateTime.Now.AddDays(-2)}
             };
 
-            mailService.Sender(MailType.Welcome);
+            mailService.Send(MailType.Welcome);
             senderMock.VerifyNoOtherCalls();
 
             Assert.AreEqual(0, errors.Count);
