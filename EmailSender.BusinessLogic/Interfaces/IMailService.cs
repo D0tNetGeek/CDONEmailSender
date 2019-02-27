@@ -8,15 +8,4 @@ namespace EmailSender.BusinessLogic.Interfaces
     {
         void Send(IList<string> errors, string from, string subject, string to, string body);
     }
-
-    /// <summary>
-    /// 
-    /// </summary>
-    sealed class NullMailSender : IMailService
-    {
-        public void Send(IList<string> errors,  string from, string subject, string to, string body)
-        {
-            
-        }
-    }
 }

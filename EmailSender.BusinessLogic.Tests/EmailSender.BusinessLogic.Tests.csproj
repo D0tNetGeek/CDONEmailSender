@@ -15,6 +15,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\EmailSender.BusinessLogic\EmailSender.BusinessLogic.csproj" />
+    <ProjectReference Include="..\EmailSender.DataLayer\EmailSender.DataLayer.csproj" />
   </ItemGroup>
 
 </Project>

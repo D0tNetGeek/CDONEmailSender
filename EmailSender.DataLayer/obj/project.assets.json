@@ -686,28 +686,33 @@
     ]
   },
   "packageFolders": {
-    "/Users/Vinnie/.nuget/packages/": {},
-    "/usr/local/share/dotnet/sdk/NuGetFallbackFolder": {}
+    "C:\\Users\\Vinnie\\.nuget\\packages\\": {},
+    "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\": {},
+    "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/Vinnie/Projects/CDONEmailSender/EmailSender.DataLayer/EmailSender.DataLayer.csproj",
+      "projectUniqueName": "C:\\Work\\CDONEmailSender\\EmailSender.DataLayer\\EmailSender.DataLayer.csproj",
       "projectName": "EmailSender.DataLayer",
-      "projectPath": "/Users/Vinnie/Projects/CDONEmailSender/EmailSender.DataLayer/EmailSender.DataLayer.csproj",
-      "packagesPath": "/Users/Vinnie/.nuget/packages/",
-      "outputPath": "/Users/Vinnie/Projects/CDONEmailSender/EmailSender.DataLayer/obj/",
+      "projectPath": "C:\\Work\\CDONEmailSender\\EmailSender.DataLayer\\EmailSender.DataLayer.csproj",
+      "packagesPath": "C:\\Users\\Vinnie\\.nuget\\packages\\",
+      "outputPath": "C:\\Work\\CDONEmailSender\\EmailSender.DataLayer\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
-        "/usr/local/share/dotnet/sdk/NuGetFallbackFolder"
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackagesFallback\\",
+        "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
       ],
       "configFilePaths": [
-        "/Users/Vinnie/.nuget/NuGet/NuGet.Config"
+        "C:\\Users\\Vinnie\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
+        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.Fallback.config"
       ],
       "originalTargetFrameworks": [
         "netcoreapp2.2"
       ],
       "sources": {
+        "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {

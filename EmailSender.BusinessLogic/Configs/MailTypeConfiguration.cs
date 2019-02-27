@@ -1,9 +1,11 @@
 using System;
 using System.Collections.Generic;
-using EmailSender.DataLayer;
 
 namespace EmailSender.BusinessLogic.Configs
 {
+    /// <summary>
+    /// Configuaration class
+    /// </summary>
     public class MailTypeConfiguration
     {
         public Func<IEnumerable<Customer>> GetCustomers { get; set; }

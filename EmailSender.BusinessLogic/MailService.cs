@@ -6,7 +6,6 @@ using EmailSender.BusinessLogic.Enums;
 using EmailSender.BusinessLogic.Interfaces;
 using EmailSender.BusinessLogic.Resources;
 using EmailSender.BusinessLogic.TemplateRenderer;
-using EmailSender.DataLayer;
 
 namespace EmailSender.BusinessLogic
 {
@@ -30,10 +29,10 @@ namespace EmailSender.BusinessLogic
         public MailService()
         {
             //List all customers
-            Customers = DataLayer1.ListCustomers;
+            Customers = DataLayer.ListCustomers();
 
             //List all orders
-            Orders = DataLayer1.ListOrders();
+            Orders = DataLayer.ListOrders();
 
             //Instantiate Sender
             Sender = new SmtpMailSender();
