@@ -4,7 +4,7 @@ using EmailSender.BusinessLogic.Enums;
 
 namespace EmailSender.Console
 {
-    //This application runs everyday.
+    //This application sends emails to customers.
     internal class Program
     {
         /// <summary>
