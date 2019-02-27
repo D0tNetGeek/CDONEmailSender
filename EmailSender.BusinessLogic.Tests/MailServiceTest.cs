@@ -94,47 +94,16 @@ namespace EmailSender.BusinessLogic.Tests
                 new Customer { CreatedDateTime = DateTime.Now, Email = "b@b.com" }
             };
 
-            mailService.Sender = senderMoq.Object;
-            mailService.MailTemplateRenderer = mailTemplateRenderer.Object;
-
-            mailService.Send(EmailType.Welcome);
-
-            senderMoq.Verify(x => x.Send(It.IsAny<IList<string>>(),
-                                       EmailTemplates.OurEmailAddress,
-                                       EmailTemplates.WelcomeEmail_Subject,
-                                       mailService.Customers.ElementAt(0).Email,
-                                       renderedTemplate), Times.Once());
-            senderMoq.Verify(x => x.Send(It.IsAny<IList<string>>(),
-                                       EmailTemplates.OurEmailAddress,
-                                       EmailTemplates.WelcomeEmail_Subject,
-                                       mailService.Customers.ElementAt(1).Email,
-                                       renderedTemplate), Times.Once());
-            senderMoq.VerifyNoOtherCalls();
-
-            Assert.AreEqual(0, errors.Count);
-        }
-
-        [TestMethod]
-        public void SendWelcomeEmails_As_Many_Calls_To_MailService_As_New_Customers()
-        {
-            var renderedTemplate = "foo";
-
-            mailTemplateRenderer.Setup(x => x.Render(EmailTemplates.WelcomeEmail, It.IsAny<object>())).Returns(renderedTemplate);
-
-            mailService.Customers = new List<Customer>{
-                new Customer { CreatedDateTime=DateTime.Now, Email="foo@abc.com"},
-                new Customer {CreatedDateTime=DateTime.Now, Email = "bar@abc.com"}
-            };
-
             mailService.Sender = senderMock.Object;
             mailService.MailTemplateRenderer = mailTemplateRenderer.Object;
+
+            mailService.Send(MailType.Welcome);
 
             senderMock.Verify(x => x.Send(It.IsAny<IList<string>>(),
                                        EmailTemplates.OurEmailAddress,
                                        EmailTemplates.WelcomeEMail_Subject,
                                        mailService.Customers.ElementAt(0).Email,
                                        renderedTemplate), Times.Once());
-
             senderMock.Verify(x => x.Send(It.IsAny<IList<string>>(),
                                        EmailTemplates.OurEmailAddress,
                                        EmailTemplates.WelcomeEMail_Subject,
