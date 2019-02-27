@@ -22,7 +22,7 @@ namespace EmailSender.BusinessLogic.Resources {
     [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
-    internal class EmailTemplates {
+    public class EmailTemplates {
         
         private static global::System.Resources.ResourceManager resourceMan;
         
@@ -36,7 +36,7 @@ namespace EmailSender.BusinessLogic.Resources {
         ///   Returns the cached ResourceManager instance used by this class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Resources.ResourceManager ResourceManager {
+        public static global::System.Resources.ResourceManager ResourceManager {
             get {
                 if (object.ReferenceEquals(resourceMan, null)) {
                     global::System.Resources.ResourceManager temp = new global::System.Resources.ResourceManager("EmailSender.BusinessLogic.Resources.EmailTemplates", typeof(EmailTemplates).Assembly);
@@ -51,7 +51,7 @@ namespace EmailSender.BusinessLogic.Resources {
         ///   resource lookups using this strongly typed resource class.
         /// </summary>
         [global::System.ComponentModel.EditorBrowsableAttribute(global::System.ComponentModel.EditorBrowsableState.Advanced)]
-        internal static global::System.Globalization.CultureInfo Culture {
+        public static global::System.Globalization.CultureInfo Culture {
             get {
                 return resourceCulture;
             }
@@ -63,7 +63,7 @@ namespace EmailSender.BusinessLogic.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Welcome {{Customer.Email}}&lt;br&gt;We miss you as a customer. Our shop is filled with nice products. Here is a voucher that gives you 50 kr to shop for.&lt;br&gt;Voucher: {{Voucher}}&lt;br&gt;&lt;br&gt;Best Regards,&lt;br&gt;{{CompanyName}} Team.
         /// </summary>
-        internal static string ComeBackEmail {
+        public static string ComeBackEmail {
             get {
                 return ResourceManager.GetString("ComeBackEmail", resourceCulture);
             }
@@ -72,16 +72,25 @@ namespace EmailSender.BusinessLogic.Resources {
         /// <summary>
         ///   Looks up a localized string similar to We miss you as a customer.
         /// </summary>
-        internal static string ComeBackEMail_Subject {
+        public static string ComeBackEMail_Subject {
             get {
                 return ResourceManager.GetString("ComeBackEMail_Subject", resourceCulture);
             }
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to infor@cdon.com.
+        /// </summary>
+        public static string OurEmailAddress {
+            get {
+                return ResourceManager.GetString("OurEmailAddress", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to Hi {{Customer.Email}}, We would like to welcome you as a customer on our site!&lt;br&gt;&lt;br&gt;Best Regards&lt;br&gt;{{CompanyName}} Team.
         /// </summary>
-        internal static string WelcomeEmail {
+        public static string WelcomeEmail {
             get {
                 return ResourceManager.GetString("WelcomeEmail", resourceCulture);
             }
@@ -90,7 +99,7 @@ namespace EmailSender.BusinessLogic.Resources {
         /// <summary>
         ///   Looks up a localized string similar to Welcome as a new customer at CDON!.
         /// </summary>
-        internal static string WelcomeEMail_Subject {
+        public static string WelcomeEMail_Subject {
             get {
                 return ResourceManager.GetString("WelcomeEMail_Subject", resourceCulture);
             }

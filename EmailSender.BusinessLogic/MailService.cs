@@ -21,7 +21,7 @@ namespace EmailSender.BusinessLogic
         public IMailService Sender { get; set; }
         public IMailTemplateRenderer MailTemplateRenderer { get; set; }
 
-        private const string OurEmailAddress = "infor@cdon.com";
+        private static readonly string OurEmailAddress = EmailTemplates.OurEmailAddress;
 
         /// <summary>
         /// Constructor - Instantiates required Objects and Mail Templates
@@ -62,24 +62,6 @@ namespace EmailSender.BusinessLogic
                 }
             };
         }
-
-//        /// <summary>
-//        /// Send ComeBack mail.
-//        /// </summary>
-//        public void SendComeBackEmail(string voucher)
-//        {
-//            //Get the Come Back Email Template.
-//            var template = EmailTemplates.ComeBackEmail;
-
-//            //Send the mail.
-//#if DEBUG
-//            Send(GetCustomersWithoutRecentOrders(), voucher, "", template);
-//#else
-//            //Every sunday run Comeback mail.
-//            if (DateTime.Now.DayOfWeek.Equals(DayOfWeek.Monday))
-//                Send(GetCustomersWithoutRecentOrders(), "CDONComebackToUs", "We miss you as a customer", template);
-//#endif
-//        }
 
         /// <summary>
         /// Get All the customers.

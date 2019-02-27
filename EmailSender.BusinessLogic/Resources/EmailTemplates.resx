@@ -129,4 +129,7 @@
   <data name="WelcomeEMail_Subject" xml:space="preserve">
     <value>Welcome as a new customer at CDON!</value>
   </data>
+  <data name="OurEmailAddress" xml:space="preserve">
+    <value>infor@cdon.com</value>
+  </data>
 </root>

@@ -22,7 +22,7 @@
 
   <ItemGroup>
     <EmbeddedResource Update="Resources\EmailTemplates.resx">
-      <Generator>ResXFileCodeGenerator</Generator>
+      <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>EmailTemplates.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
